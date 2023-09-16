@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    
+   
+</head>
+
+<img src="img.png">
+
+<center>
+
+<header class="header">
+
+    <p><hr size="30" color="orange"> </p>
+    <p><hr size="60" color="green"> </p>
+    <p><hr size="30" color="red"> </p>
+    <h1></h1>
+</header>
+
+
+<body>  
+    
+    <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+        <div>
+            <label style="color: white;">Item</label><label class="validation-error hide" id="itemNameValidationError">This field is required.</label>
+            <input type="text" name="itemName" id="itemName">
+        </div>
+        <div>
+            <label style="color: white;">Quantity</label><label class="validation-error hide" id="itemNameValidationError">This field is required.</label>
+            <input type="number" name="Quantity" id="Quantity">
+        </div>
+         <div>
+            <label style="color: white;">Price</label><label class="validation-error hide" id="itemNameValidationError">This field is required.</label>
+            <input type="number" name="Price" id="Price">
+        </div>
+        <div  class="form-action-buttons">
+            <input type="submit" value="Order" onclick="calculate()">
+        </div>
+
+        <div>
+            <label style="color: white;">Total</label><label class="validation-error hide" id="itemNameValidationError">This field is required.</label>
+            <input type="number" name="Total" id="Total" value="0" readonly>
+        </div>
+    </form>
+    <table class="list" id="itemList">
+        <thead>
+            <tr>
+                <th>ITEMS</th>
+                <th>QUANTITY</th>
+                <th>PRICE</th>
+                <th>TOTAL</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    
+    <script src="script.js"></script>
+</body>
+</html>
